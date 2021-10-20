@@ -1,0 +1,4 @@
+#Aca se agregan los candidatos para llenar el backlog y llevar un raconto de el progreso general
+
+1. Inicializar el proyecto de Django y React para luego tener bien definido la base del entorno, el cual sea
+   replicable en todos los ordenadores.
