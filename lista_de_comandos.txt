@@ -83,3 +83,5 @@ python manage.py runserver
 #Pip
 
 pip install -r requirements.txt #Instala todos los modulos y versiones presentes en el archivo .txt
+
+nmp install #Instala todas las dependencia de React

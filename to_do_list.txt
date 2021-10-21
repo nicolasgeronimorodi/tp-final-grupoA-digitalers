@@ -1,4 +1,17 @@
 #Aca se agregan los candidatos para llenar el backlog y llevar un raconto de el progreso general
 
-1. Inicializar el proyecto de Django y React para luego tener bien definido la base del entorno, el cual sea
+a. Inicializar el proyecto de Django y React para luego tener bien definido la base del entorno, el cual sea
    replicable en todos los ordenadores.
+
+0. Como desarrollador quisiera tener un entorno funcionando, esto implica: un repositorio de github para el
+proyecto, y una instancia de django y de react funcionando.
+
+1. Como programador quisiera guardar la url y el alias en el backend
+
+2. Como usuario quisiera visualizar la cantidad de veces que otras personas entraron a mi link. 
+
+3. Como usuario quisiera ingresar una url en un formulario y que me devuelva un alias para ese link (front).
+
+4. Como usuario quisiera entrar a un alias y ser redirigido al link original.
+
+5. Como usuario quisiera poder acceder a la aplicacion desde internet.
