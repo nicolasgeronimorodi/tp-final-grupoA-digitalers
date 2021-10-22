@@ -4,7 +4,12 @@ a. Inicializar el proyecto de Django y React para luego tener bien definido la b
    replicable en todos los ordenadores.
 
 0. Como desarrollador quisiera tener un entorno funcionando, esto implica: un repositorio de github para el
-proyecto, y una instancia de django y de react funcionando.
+proyecto, y una instancia de django y de react funcionando. (Hecho)
+
+Notas: Pequeña advertencia con respecto al npm install
+found 27 vulnerabilities (8 moderate, 18 high, 1 critical)
+run `npm audit fix` to fix them, or `npm audit` for details
+La verdad que no se que significa. Habra que preguntarle al profesor.
 
 1. Como programador quisiera guardar la url y el alias en el backend
 
