@@ -30,7 +30,7 @@ this.handleSubmit=this.handleSubmit.bind(this);
 
 postUrl=payload=>{
     console.log("mandando payload")
-    await fetch('http://localhost:8000/api',
+    fetch('http://localhost:8000/api',
     {
         method: 'POST',
         body: JSON.stringify(payload),
