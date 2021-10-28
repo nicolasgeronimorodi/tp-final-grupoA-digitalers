@@ -99,8 +99,10 @@ path completo)
 
 4. Ir a otra terminal y instalarse un venv (opcional)
 
-5. Correr el comando "python manage.py migrate"
+5. Correr el comando "pip install -r requirements.txt"
 
-6. Correr el comando "python manage.py runserver" para inicializar el enviroment
+6. Correr el comando "python manage.py migrate"
 
-7. Comporbar en el navegador la url "localhost:8000"
+7. Correr el comando "python manage.py runserver" para inicializar el enviroment
+
+8. Comporbar en el navegador la url "localhost:8000" (Asegurarse que sea localhost y no 127.0.0.1)
