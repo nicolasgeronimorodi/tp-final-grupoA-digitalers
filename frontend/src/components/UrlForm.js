@@ -65,6 +65,8 @@ export default class UrlForm extends React.Component {
                     <input type='text'
                         value={this.state.url}
                         onChange={this.handleChange} />
+                    <input type='submit'
+                    value="Generar alias" />                
                 </form>
 
                 <div class="response">
