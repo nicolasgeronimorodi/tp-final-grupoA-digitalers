@@ -85,3 +85,22 @@ python manage.py runserver
 pip install -r requirements.txt #Instala todos los modulos y versiones presentes en el archivo .txt
 
 nmp install #Instala todas las dependencia de React
+
+#Entorno funcionando
+
+1. Descargar el repositorio completo de github
+
+2. Usar el comando "cd frontend" para navegar dentro de la carpeta de frontend (si no funciona prueben usando el
+path completo)
+
+2. Correr el comando "npm install"
+
+3. Correr el comando "npm run dev"
+
+4. Ir a otra terminal y instalarse un venv (opcional)
+
+5. Correr el comando "python manage.py migrate"
+
+6. Correr el comando "python manage.py runserver" para inicializar el enviroment
+
+7. Comporbar en el navegador la url "localhost:8000"
