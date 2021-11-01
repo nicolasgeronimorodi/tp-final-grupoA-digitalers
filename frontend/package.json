@@ -22,6 +22,7 @@
     "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
+    "css-loader": "^6.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
