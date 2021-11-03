@@ -6,11 +6,33 @@ export default class UrlForm extends React.Component {
         this.state = {
             url: null,
             alias: null,
+            errors: {}
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.postUrl = this.postUrl.bind(this)
+        this.handleValidation = this.handleValidation.bind(this)
 
+    }
+
+    handleValidation() {
+        let errors = {};
+        let formIsValid = true;
+        if (!this.state.url) {
+            formIsValid = false;
+            errors["url"] = "No puede quedar vacío"
+        }
+
+        if (typeof this.state.url !== "undefined") {
+            if (!this.state.url.match(/^(ftp|http|https):\/\/[^ "]+$/)) { ///la regex tiene que incluir letras, numeros y obligatoriamente un punto
+                formIsValid = false;
+                errors["url"] = "Sólo letras"
+            }
+        }
+        this.setState({ errors: errors });
+        console.log('formIsValid'+ formIsValid)
+        return formIsValid
+        
     }
 
     handleSubmit = (e) => {
@@ -20,9 +42,15 @@ export default class UrlForm extends React.Component {
         }
         this.postUrl(payload)
         console.log(this.state.url)
-
-
+        if (this.handleValidation()) {
+            alert("URL enviada");
+        } else {
+            alert("El formulario tiene errores")
+        }
     }
+
+
+
 
     handleChange = (e) => {
 
@@ -49,7 +77,6 @@ export default class UrlForm extends React.Component {
                 console.log("el alias es" + data.alias)
                 this.setState({ alias: data.alias })
             }
-
             )
 
     };
@@ -67,7 +94,7 @@ export default class UrlForm extends React.Component {
                             <form onSubmit={this.handleSubmit}>
                                 <p>Ingresar url</p>
                                 <section class="section">
-                                    <input class="input mb-5" type="text" placeholder="Text input" value={this.state.url} onChange={this.handleChange} />
+                                    <input class="input mb-5" type="text" placeholder="www.example.com" value={this.state.url} onChange={this.handleChange} />
                                     <button class="button is-primary">Acortar enlace</button>
                                 </section>
                             </form>
@@ -87,3 +114,4 @@ export default class UrlForm extends React.Component {
 
     }
 }
+

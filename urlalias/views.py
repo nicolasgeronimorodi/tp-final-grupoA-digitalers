@@ -143,6 +143,7 @@ class Api(views.View):
 
         response={"alias": alias}
         print(f"response es {response}")
+        
         return JsonResponse(response, status=201)
 
 def redir(request, pk):#redirecciona al enlace original request,
