@@ -61,20 +61,27 @@ export default class UrlForm extends React.Component {
 
             <>
 
-                <form onSubmit={this.handleSubmit}>
-                    <input type='text'
-                        value={this.state.url}
-                        onChange={this.handleChange} />
-                    <input type='submit'
-                    value="Generar alias" />                
-                </form>
+                <section class="section">
+                    <div class="columns">
+                        <div class="column is-half-tablet is-one-quarter-fullhd">
+                            <form onSubmit={this.handleSubmit}>
+                                <p>Ingresar url</p>
+                                <section class="section">
+                                    <input class="input mb-5" type="text" placeholder="Text input" value={this.state.url} onChange={this.handleChange} />
+                                    <button class="button is-primary">Acortar enlace</button>
+                                </section>
+                            </form>
+                        </div>
+                    </div>
 
-                <div class="response">
-                    {this.state.alias}
-                </div>
+
+                    <div class="response">
+                        {this.state.alias}
+                    </div>
 
 
 
+                </section>
             </>
         )
 
