@@ -16,6 +16,9 @@ export default class UrlForm extends React.Component {
     }
 
     handleValidation() {
+        const expression = /((ftp|http|https):\/\/)?www\.([A-z]+)\.([A-z]{2,})/gi;
+        let regex=new RegExp(expression)
+        
         let errors = {};
         let formIsValid = true;
         if (!this.state.url) {
@@ -24,26 +27,27 @@ export default class UrlForm extends React.Component {
         }
 
         if (typeof this.state.url !== "undefined") {
-            if (!this.state.url.match(/^(ftp|http|https):\/\/[^ "]+$/)) { ///la regex tiene que incluir letras, numeros y obligatoriamente un punto
+            if (!this.state.url.match(regex)){ ///la regex tiene que incluir letras, numeros y obligatoriamente un punto
                 formIsValid = false;
                 errors["url"] = "Sólo letras"
             }
         }
         this.setState({ errors: errors });
-        console.log('formIsValid'+ formIsValid)
+        console.log('formIsValid' + formIsValid)
         return formIsValid
-        
+
     }
 
     handleSubmit = (e) => {
-        e.preventDefault()
+
         const payload = {
             url: this.state.url
         }
-        this.postUrl(payload)
-        console.log(this.state.url)
+        e.preventDefault()
         if (this.handleValidation()) {
             alert("URL enviada");
+            this.postUrl(payload)
+            console.log(this.state.url)
         } else {
             alert("El formulario tiene errores")
         }
