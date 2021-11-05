@@ -8,7 +8,7 @@ export default function Header() {
  
 <>
 
-<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+<nav class="navbar is-danger" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="https://bulma.io">
             <img
@@ -16,18 +16,6 @@ export default function Header() {
               width="112"
               height="28"
             />
-          </a>
-
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
           </a>
         </div>
 
@@ -44,11 +32,15 @@ export default function Header() {
           </div>
         </div>
       </nav>
-    <section class="section has-background-info">
+    <section class="section has-background-black-ter">
 
       <div class="container">
-        <h1 class="title">Acortador de Links</h1>
-        <p class="subtitle"> Ahorrá espacio usando nuestra herramienta <strong></strong></p>
+      
+        <h1 class="title has-text-grey-lighter">Acortador de Links</h1>
+        <h2 class="subtitle has-text-grey-lighter"> Generá enlaces más cortos con esta herramienta </h2>
+       
+        
+    
       </div>
     </section>
  

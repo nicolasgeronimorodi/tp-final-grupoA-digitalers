@@ -1,8 +1,9 @@
 .wrapper{
-    padding: 15px;
+    
     height: 100%;
-    background-color: beige;
+    background-color: white;
     color: black;
-   
-
+}
+.homepage{
+    padding: 15px;
 }

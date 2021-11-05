@@ -12,11 +12,10 @@ render(){
     return( 
     <div className="wrapper">
     <Header />   
-    <HomePage />
+    <HomePage cname="homepage"/>
     <UrlForm />
-
     </div>
-)
+    )
     }
 }
 export default App
