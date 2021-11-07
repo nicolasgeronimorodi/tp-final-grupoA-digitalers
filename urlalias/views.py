@@ -141,7 +141,7 @@ class Api(views.View):
         alias = f"http://localhost:8000/{alias_parcial}"#para usar en localhost
         #alias = f"http://www.Dominio/{alias_parcial}"#para usar en servidor en la nube
 
-        response={"alias": alias}
+        response={"alias": alias_parcial}
         print(f"response es {response}")
         
         return JsonResponse(response, status=201)
