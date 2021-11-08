@@ -21,3 +21,10 @@ class TestURLAlias(models.Model):
     fullurl=models.TextField(null=False)
     visitas=models.IntegerField(default=0)
     created_at=models.DateTimeField(default=timezone.now)
+
+
+class Visitas_ind(models.Model):#tabla para contavilizar cantidad de personas que visitan el liks
+    id=models.BigAutoField(primary_key=True)
+    ip=models.TextField(null=False)
+    alias=models.TextField(null=False)
+    requested_at=models.DateTimeField(default=timezone.now)
