@@ -169,8 +169,9 @@ class Api(views.View):
         #alias = f"http://127.0.0.1:8000/r/{alias_parcial}"
         alias = f"{host_dir}r/{alias_parcial}"
 
-        response={"alias": alias}
+        response={"alias": alias_parcial}
         print(f"response es {response}")
+        
         return JsonResponse(response, status=201)
 
 def redir(request, pk):#redirecciona al enlace original

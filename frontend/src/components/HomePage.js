@@ -6,7 +6,11 @@ export default class HomePage extends React.Component{
     }
 
 render(){
-    return <p> Esta es la home page</p>
+    return (
+    <div className={this.props.cname}>   
+    <p> Esta es la home page</p>
+    </div>
+    )
 }
 
 }

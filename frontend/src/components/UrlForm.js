@@ -6,23 +6,55 @@ export default class UrlForm extends React.Component {
         this.state = {
             url: null,
             alias: null,
+            errors: {}
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.postUrl = this.postUrl.bind(this)
+        this.handleValidation = this.handleValidation.bind(this)
+
+    }
+
+    handleValidation() {
+        const expression = /((ftp|http|https):\/\/)?www\.([A-z]+)\.([A-z]{2,})/gi;
+        let regex=new RegExp(expression)
+        
+        let errors = {};
+        let formIsValid = true;
+        if (!this.state.url) {
+            formIsValid = false;
+            errors["url"] = "No puede quedar vacío"
+        }
+
+        if (typeof this.state.url !== "undefined") {
+            if (!this.state.url.match(regex)){ ///la regex tiene que incluir letras, numeros y obligatoriamente un punto
+                formIsValid = false;
+                errors["url"] = "Sólo letras"
+            }
+        }
+        this.setState({ errors: errors });
+        console.log('formIsValid' + formIsValid)
+        return formIsValid
 
     }
 
     handleSubmit = (e) => {
-        e.preventDefault()
+
         const payload = {
             url: this.state.url
         }
-        this.postUrl(payload)
-        console.log(this.state.url)
-
-
+        e.preventDefault()
+        if (this.handleValidation()) {
+            alert("URL enviada");
+            this.postUrl(payload)
+            console.log(this.state.url)
+        } else {
+            alert("El formulario tiene errores")
+        }
     }
+
+
+
 
     handleChange = (e) => {
 
@@ -49,11 +81,14 @@ export default class UrlForm extends React.Component {
                 console.log("el alias es" + data.alias)
                 this.setState({ alias: data.alias })
             }
-
             )
 
     };
 
+    handleRedirect=props=>{
+        let alias=this.state.alias
+        props.history.push(alias)
+    }
 
 
     render() {
@@ -67,8 +102,8 @@ export default class UrlForm extends React.Component {
                             <form onSubmit={this.handleSubmit}>
                                 <p>Ingresar url</p>
                                 <section class="section">
-                                    <input class="input mb-5" type="text" placeholder="Text input" value={this.state.url} onChange={this.handleChange} />
-                                    <button class="button is-primary">Acortar enlace</button>
+                                    <input class="input mb-5" type="text" placeholder="www.example.com" value={this.state.url} onChange={this.handleChange} />
+                                    <button onClick={this.handleRedirect(this.props)}class="button is-primary">Acortar enlace</button>
                                 </section>
                             </form>
                         </div>
@@ -87,3 +122,4 @@ export default class UrlForm extends React.Component {
 
     }
 }
+
