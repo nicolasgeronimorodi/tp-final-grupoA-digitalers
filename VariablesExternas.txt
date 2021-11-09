@@ -1,0 +1,2 @@
+host_dir=http://127.0.0.1:8000/
+variable_2=esta es la variable_2

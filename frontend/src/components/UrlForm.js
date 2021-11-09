@@ -87,7 +87,7 @@ export default class UrlForm extends React.Component {
 
     handleRedirect=props=>{
         let alias=this.state.alias
-        props.history.push(alias)
+        // props.history.push(alias)
     }
 
 
