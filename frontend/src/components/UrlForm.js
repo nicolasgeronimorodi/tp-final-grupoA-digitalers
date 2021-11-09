@@ -85,6 +85,10 @@ export default class UrlForm extends React.Component {
 
     };
 
+    handleRedirect=props=>{
+        let alias=this.state.alias
+        // props.history.push(alias)
+    }
 
 
     render() {
@@ -99,7 +103,7 @@ export default class UrlForm extends React.Component {
                                 <p>Ingresar url</p>
                                 <section class="section">
                                     <input class="input mb-5" type="text" placeholder="www.example.com" value={this.state.url} onChange={this.handleChange} />
-                                    <button class="button is-primary">Acortar enlace</button>
+                                    <button onClick={this.handleRedirect(this.props)}class="button is-primary">Acortar enlace</button>
                                 </section>
                             </form>
                         </div>
