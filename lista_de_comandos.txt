@@ -97,14 +97,16 @@ path completo)
 
 2. Correr el comando "npm install"
 
-3. Correr el comando "npm run dev"
+3. Correr el comando "npm install --save-dev style-loader"
 
-4. Ir a otra terminal y instalarse un venv (opcional)
+4. Correr el comando "npm run dev"
 
-5. Correr el comando "pip install -r requirements.txt"
+5. Ir a otra terminal y instalarse un venv (opcional)
 
-6. Correr el comando "python manage.py migrate"
+6. Correr el comando "pip install -r requirements.txt"
 
-7. Correr el comando "python manage.py runserver" para inicializar el enviroment
+7. Correr el comando "python manage.py migrate"
 
-8. Comporbar en el navegador la url "localhost:8000" (Asegurarse que sea localhost y no 127.0.0.1)
+8. Correr el comando "python manage.py runserver" para inicializar el enviroment
+
+9. Comporbar en el navegador la url "localhost:8000" (Puede usarse localhost o 127.0.0.1)
