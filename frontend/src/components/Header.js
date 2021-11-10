@@ -11,7 +11,7 @@ export default function Header() {
         <div className="navbar-brand">
           <a className="navbar-item" href="https://bulma.io">
             <img
-              src="https://bulma.io/images/bulma-logo.png"
+              src="static/frontend/shorty-header-banner.png"
               width="112"
               height="28"
             />
