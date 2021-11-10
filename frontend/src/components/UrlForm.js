@@ -103,28 +103,28 @@ export default class UrlForm extends React.Component {
 
             <>
 
-                <section class="section">
-                    <div class="columns">
-                        <div class="column is-half-tablet is-one-quarter-fullhd">
+                <section className="section">
+                    <div className="columns">
+                        <div className="column is-half-tablet is-one-quarter-fullhd">
                             <form onSubmit={this.handleSubmit}>
                                 <p>Ingresar url</p>
-                                <section class="section">
-                                    <input class="input mb-5" type="text" placeholder="www.example.com" value={this.state.url} onChange={this.handleChange} />
-                                    <button onClick={this.handleRedirect(this.props)}class="button is-primary">Acortar enlace</button>
+                                <section className="section">
+                                    <input className="input mb-5" type="text" placeholder="www.example.com" value={this.state.url || ""} onChange={this.handleChange} />
+                                    <button onClick={this.handleRedirect(this.props)}className="button is-primary">Acortar enlace</button>
                                 </section>
                             </form>
                         </div>
                     </div>
 
                 </section>
-                                <section class="section">
-                    <div class="columns">
-                        <div class="column is-half-tablet is-one-quarter-fullhd">
-                            {/*<a href= {redirect_url}>{redirect_url}</a><br/>*/}
-                            <input class="input mb-5" type="text" placeholder="http://localhost:8000/r/AAAA111" value={redirect_url} onChange={this.handleChange} />
-                            <button onClick={()=> window.open(redirect_url, "_blank")}class="button is-primary">Redireccionar</button>
+                                <section className="section">
+                    <div className="columns">
+                        <div className="column is-half-tablet is-one-quarter-fullhd">
+                            <a href= {redirect_url}>{redirect_url}</a><br/>
+                            {/*<input class="input mb-5" type="text" placeholder="http://localhost:8000/r/AAAA111" value={redirect_url} onChange={this.handleChange} />*/}
+                            <button onClick={()=> window.open(redirect_url, "_blank")}className="button is-primary">Redireccionar</button>
                             <CopyToClipboard text={redirect_url}>
-                                <button class="button is-primary">Copiar URL</button>
+                                <button className="button is-primary">Copiar URL</button>
                             </CopyToClipboard>
                         </div>
                     </div>

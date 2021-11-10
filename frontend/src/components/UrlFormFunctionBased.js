@@ -6,7 +6,6 @@ const UrlFormFunctionBased=props=>{
     const handleValidation=()=> {
         const expression = /((ftp|http|https):\/\/)?www\.([A-z]+)\.([A-z]{2,})/gi;
         let regex=new RegExp(expression)
-        
         let errors = {};
         let formIsValid = true;
         if (!url) {
@@ -20,7 +19,6 @@ const UrlFormFunctionBased=props=>{
                 errors["url"] = "Sólo letras"
             }
         }
-      
         console.log('formIsValid' + formIsValid)
         return formIsValid
 

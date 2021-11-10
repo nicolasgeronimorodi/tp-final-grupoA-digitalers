@@ -7,9 +7,9 @@ export default function Header() {
   return (
 <>
 
-<nav class="navbar is-danger" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
+<nav className="navbar is-danger" role="navigation" aria-label="main navigation">
+        <div className="navbar-brand">
+          <a className="navbar-item" href="https://bulma.io">
             <img
               src="https://bulma.io/images/bulma-logo.png"
               width="112"
@@ -18,22 +18,22 @@ export default function Header() {
           </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div id="navbarBasicExample" className="navbar-menu">
 
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <div className="buttons">
               </div>
             </div>
           </div>
         </div>
       </nav>
-    <section class="section has-background-black-ter">
+    <section className="section has-background-black-ter">
 
-      <div class="container">
+      <div className="container">
 
-        <h1 class="title has-text-grey-lighter">Acortador de Links</h1>
-        <h2 class="subtitle has-text-grey-lighter"> Generá enlaces más cortos con esta herramienta </h2>
+        <h1 className="title has-text-grey-lighter">Acortador de Links</h1>
+        <h2 className="subtitle has-text-grey-lighter"> Generá enlaces más cortos con esta herramienta </h2>
 
       </div>
     </section>
