@@ -7,8 +7,7 @@ export default class HomePage extends React.Component{
 
 render(){
     return (
-    <div className={this.props.cname}>   
-    <p> Esta es la home page</p>
+    <div className={this.props.cname}>
     </div>
     )
 }

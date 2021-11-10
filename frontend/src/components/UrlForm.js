@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export default class UrlForm extends React.Component {
     constructor(props) {
@@ -16,9 +17,13 @@ export default class UrlForm extends React.Component {
     }
 
     handleValidation() {
-        const expression = /((ftp|http|https):\/\/)?www\.([A-z]+)\.([A-z]{2,})/gi;
-        let regex=new RegExp(expression)
-        
+        const pattern = new RegExp('^(https?:\\/\\/)'+ // protocol
+        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+        '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+        '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+        '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+        let regex=new RegExp(pattern)
         let errors = {};
         let formIsValid = true;
         if (!this.state.url) {
@@ -92,6 +97,8 @@ export default class UrlForm extends React.Component {
 
 
     render() {
+        let redirect_url = this.state.alias == null ? null : "http://localhost:8000/r/" + this.state.alias
+        const url = redirect_url
         return (
 
             <>
@@ -109,13 +116,18 @@ export default class UrlForm extends React.Component {
                         </div>
                     </div>
 
-
-                    <div class="response">
-                        {this.state.alias}
+                </section>
+                                <section class="section">
+                    <div class="columns">
+                        <div class="column is-half-tablet is-one-quarter-fullhd">
+                            {/*<a href= {redirect_url}>{redirect_url}</a><br/>*/}
+                            <input class="input mb-5" type="text" placeholder="http://localhost:8000/r/AAAA111" value={redirect_url} onChange={this.handleChange} />
+                            <button onClick={()=> window.open(redirect_url, "_blank")}class="button is-primary">Redireccionar</button>
+                            <CopyToClipboard text={redirect_url}>
+                                <button class="button is-primary">Copiar URL</button>
+                            </CopyToClipboard>
+                        </div>
                     </div>
-
-
-
                 </section>
             </>
         )

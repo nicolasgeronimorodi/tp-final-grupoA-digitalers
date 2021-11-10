@@ -9,19 +9,11 @@ class App extends React.Component{
         super(props);
     }
 render(){
-    return( 
-
+    return(
     <div className="wrapper">
-    <Header />   
-    <HomePage cname="homepage"/>
-    <UrlForm />
-    {/*<Router>
-    <Switch>
-    <Route  exact path="/"  component={UrlFormFunctionBased} />
-    <Route path="/alias/:alias" component={AliasPage} /> 
-    </Switch>
-    </Router>*/}
-    
+        <Header />
+        <HomePage className="homepage"/>
+        <UrlForm />
     </div>
     )
     }
