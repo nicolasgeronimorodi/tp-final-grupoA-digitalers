@@ -103,7 +103,6 @@ path completo)
 
 6. Correr el comando "npm install"
 
-<<<<<<< HEAD
 7. Correr el comando "npm install --save-dev style-loader"
 
 8. Correr el comando "npm install --save react-copy-to-clipboard"
@@ -115,18 +114,3 @@ path completo)
 10. Volver a la terminal de python y correr el comando "python manage.py runserver" para inicializar el enviroment
 
 11. Comporbar en el navegador la url "localhost:8000" (Puede usarse localhost o 127.0.0.1)
-=======
-3. Correr el comando "npm install --save-dev style-loader"
-
-4. Correr el comando "npm run dev"
-
-5. Ir a otra terminal y instalarse un venv (opcional)
-
-6. Correr el comando "pip install -r requirements.txt"
-
-7. Correr el comando "python manage.py migrate"
-
-8. Correr el comando "python manage.py runserver" para inicializar el enviroment
-
-9. Comporbar en el navegador la url "localhost:8000" (Puede usarse localhost o 127.0.0.1)
->>>>>>> e8826416d3d0dfd11d45d8fe1a63c508ec1415b1
